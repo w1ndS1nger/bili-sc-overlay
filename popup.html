@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>醒目留言设置</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>醒目留言</h1>
+    <p class="intro">拖动卡片顶部可移动，拖动左下角可调整宽度和最大高度。</p>
+    <label for="maxCards">最多显示</label>
+    <select id="maxCards">
+      <option value="1">1 条</option><option value="2">2 条</option>
+      <option value="3">3 条</option><option value="5">5 条</option>
+      <option value="10">10 条</option><option value="99">全部</option>
+    </select>
+    <label for="width">窗口宽度 <output id="widthValue"></output></label>
+    <input id="width" type="range" min="180" max="520" step="10">
+    <label for="height">最大高度 <output id="heightValue"></output></label>
+    <input id="height" type="range" min="100" max="700" step="10">
+    <label for="opacity">透明度 <output id="opacityValue"></output></label>
+    <input id="opacity" type="range" min="60" max="100" step="5">
+    <button id="reset" type="button">恢复默认设置</button>
+    <p class="hint">设置会自动保存，并立即应用到已打开的直播间。</p>
+  </main>
+  <script src="sc-data.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
